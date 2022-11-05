@@ -1,6 +1,5 @@
 # Automation_Testing_Framework
  
-# AutomationTestFramework
 This framework is implemented using page object model pattern to automate Registration and login process
 
 The project works by running the TestNG.xml file as run as suite
