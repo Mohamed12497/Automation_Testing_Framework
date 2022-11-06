@@ -12,11 +12,10 @@ import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.SignUpPage;
 
-public class SignUpAndLoginTest extends TestBase{
+public class SignUpTest extends TestBase{
 	
 	HomePage HomepageObject;
-	SignUpPage signUpObject;
-	LoginPage LoginPageObject;
+
 	Faker fakeData = new Faker();
 	
 	@BeforeTest
@@ -25,7 +24,7 @@ public class SignUpAndLoginTest extends TestBase{
 		HomepageObject = new HomePage(TestBase.driver);
 		HomepageObject.openSignUpPage();
 		signUpObject = new SignUpPage(driver);
-		LoginPageObject = new LoginPage(driver);
+		
 		
 		// Generating data using faker library
 		
@@ -52,17 +51,5 @@ public class SignUpAndLoginTest extends TestBase{
 		
 	}
 	
-	@Test(priority = 2)
-	public void Login() throws InterruptedException {
-		
-		LoginPageObject.setEmail_address(signUpObject.getEmail_address().toString());
-		LoginPageObject.setPassword(signUpObject.getPassword().toString());
-		
-		LoginPageObject.Login(signUpObject.getEmail_address(), signUpObject.getPassword());
-		Thread.sleep(4000);
-		//Name Assertion 
-		Assert.assertEquals(driver.findElement(By.xpath("//strong[@style='text-transform:capitalize']")).getText(), signUpObject.getFirst_Name());
-		
-	}
 	
 }

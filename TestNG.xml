@@ -3,7 +3,8 @@
 <suite name="Default suite" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test" verbose="2">
     <classes>
-      <class name="Tests.SignUpAndLoginTest"/>
+      <class name="Tests.SignUpTest"/>
+      <class name="Tests.Login"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
