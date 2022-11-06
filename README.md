@@ -20,10 +20,10 @@ The src/main/java package contains 4 classes:
 - SignUpPage class that contains locaters, setters and getters for sign up page, in addition to the method for signing up function
 - Loginpage class that contains locaters, setters and getters for login page, in addition to the method for login function
 
-The src/test/java package contains 2 classes:
+The src/test/java package contains 3 classes:
 
 - TestBase class for initiating chrome driver then navigating to website (parent class)
-- SignUpANDLogin class that contains 3 methods
+- SignUp class that contains 3 methods
   - the first one for generating data using faker library
   - the second one for sign up test case
-  - and the third one for the login test case
+- Login class that contains Login method
